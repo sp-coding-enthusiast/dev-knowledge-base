@@ -17,11 +17,7 @@ This repository is built to:
 
 ## 🧩 What You’ll Find Here
 
-* 📌 Core formulas (ML, statistics, math)
-* 🧠 Concept summaries in simple language
 * ⚡ Command cheat sheets (Docker, Git, SQL, Linux)
-* 🤖 AI / ML / NLP quick references
-* ☁️ Cloud & DevOps notes
 * 🧪 Practical examples & best practices
 
 ---
@@ -30,26 +26,8 @@ This repository is built to:
 
 ```
 .
-├── python/
-│   ├── basics.md
-│   ├── numpy.md
-│   └── pandas.md
-│
-├── machine-learning/
-│   ├── formulas.md
-│   ├── algorithms.md
-│
-├── deep-learning/
-│   ├── neural-networks.md
-│   └── optimization.md
-│
 ├── docker/
 │   ├── commands.md
-│   └── dockerfile.md
-│
-├── sql/
-├── cloud/
-├── system-design/
 └── README.md
 ```
 
@@ -105,4 +83,4 @@ If you find this repository helpful:
 
 * Star ⭐ the repo
 * Share with others
-* Contribute and help it gro
+* Contribute and help it grow
