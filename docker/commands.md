@@ -302,6 +302,69 @@ Copies files from container to local system.
 docker cp <container>:/path/to/file ./
 ```
 
+---
+## 🌐 List Docker Networks
+
+Shows all Docker networks available on the host.
+
+```bash
+docker network ls
+```
+
+---
+## 🔍 Inspect a Docker Network
+
+Displays detailed information about a specific network.
+
+```bash
+docker network inspect <network-name>
+```
+
+---
+## ➕ Create a Docker Network
+
+Creates a new custom Docker network.
+
+```bash
+docker network create <network-name>
+```
+
+---
+## ▶️ Run Container in a Specific Network
+
+Starts a container and attaches it to a specified network.
+
+```bash
+docker run --network my-network <container>
+```
+
+---
+## 🔗 Connect Container to a Network
+
+Connects an existing container to a network.
+
+```bash
+docker network connect my-network <container>
+```
+
+---
+## 🔌 Disconnect Container from a Network
+
+Removes a container from a network.
+
+```bash
+docker network disconnect my-network <container>
+```
+
+---
+## 🗑️ Remove a Docker Network
+
+Deletes a Docker network.
+
+```bash
+docker network rm my-network
+```
+
 
 
 
