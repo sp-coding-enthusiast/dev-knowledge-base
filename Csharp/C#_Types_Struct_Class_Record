@@ -1,0 +1,184 @@
+# C# Types
+
+## Struct vs Class vs Record (Layman Explanation + Use Cases)
+
+---
+
+## Big Picture (In Simple Words)
+
+In C#, **Struct**, **Class**, and **Record** are ways to create your own data types.
+
+Think of them like **containers** for data and behavior, but each is designed for a **different purpose**.
+
+---
+
+## One-Line Understanding
+
+* **Struct** → Small, simple data (copied by value)
+* **Class** → Objects with identity and behavior (copied by reference)
+* **Record** → Objects where data matters more than identity (immutable by default)
+
+---
+
+## Struct
+
+### What is a Struct?
+
+A **struct** is a lightweight data container.
+
+### Layman Explanation
+
+> A struct is like a **photocopy**. When you pass it around, you get a copy, not the original.
+
+### Key Characteristics
+
+* Value type
+* Stored mostly on stack
+* Copied when passed to methods
+* Cannot inherit from another struct or class
+* Good for small data
+
+### Example
+
+```csharp
+struct Point
+{
+    public int X;
+    public int Y;
+}
+
+Point p1 = new Point { X = 10, Y = 20 };
+Point p2 = p1;   // copy created
+p2.X = 50;
+
+// p1.X is still 10
+```
+
+### When to Use Struct
+
+* Coordinates (Point, Vector)
+* Date, Time
+* Small, immutable data
+* Performance-critical code
+
+---
+
+## Class
+
+### What is a Class?
+
+A **class** is a reference type used to model real-world objects.
+
+### Layman Explanation
+
+> A class is like a **shared remote control**. Everyone points to the same object.
+
+### Key Characteristics
+
+* Reference type
+* Stored on heap
+* Passed by reference
+* Supports inheritance
+* Supports polymorphism
+
+### Example
+
+```csharp
+class Person
+{
+    public string Name;
+}
+
+Person p1 = new Person { Name = "Amit" };
+Person p2 = p1;   // same reference
+p2.Name = "Rahul";
+
+// p1.Name is now "Rahul"
+```
+
+### When to Use Class
+
+* Business entities
+* Services
+* Domain models
+* Objects with identity
+
+---
+
+## Record
+
+### What is a Record?
+
+A **record** is a special type of class focused on **data**, not identity.
+
+### Layman Explanation
+
+> A record is like a **form** — two forms are equal if the content is equal.
+
+### Key Characteristics
+
+* Reference type (by default)
+* Immutable by default
+* Value-based equality
+* Supports with-expressions
+
+### Example
+
+```csharp
+public record Employee(string Name, int Age);
+
+var e1 = new Employee("Neha", 30);
+var e2 = new Employee("Neha", 30);
+
+Console.WriteLine(e1 == e2); // true
+```
+
+### Immutability Example
+
+```csharp
+var e3 = e1 with { Age = 31 };
+```
+
+---
+
+## Key Differences (Interview Table)
+
+| Feature     | Struct             | Class        | Record               |
+| ----------- | ------------------ | ------------ | -------------------- |
+| Type        | Value              | Reference    | Reference            |
+| Equality    | By value           | By reference | By value             |
+| Mutability  | Mutable by default | Mutable      | Immutable by default |
+| Inheritance | No                 | Yes          | Yes                  |
+| Memory      | Stack (mostly)     | Heap         | Heap                 |
+
+---
+
+## Real-Life Analogy
+
+| Type   | Analogy       |
+| ------ | ------------- |
+| Struct | Photocopy     |
+| Class  | Shared remote |
+| Record | Filled form   |
+
+---
+
+## When to Use What (Very Important)
+
+| Scenario                         | Use    |
+| -------------------------------- | ------ |
+| Small data, performance critical | Struct |
+| Business object with identity    | Class  |
+| DTOs, API models, immutable data | Record |
+
+---
+
+## Interview-Friendly Answer
+
+> Structs are value types used for small data. Classes are reference types used for objects with identity and behavior. Records are reference types designed for immutable data with value-based equality, commonly used for DTOs and API models.
+
+---
+
+## One-Line Summary
+
+**Struct = small data, Class = object with identity, Record = immutable data-focused object.**
