@@ -1,6 +1,6 @@
 # Region of Interest (ROI) & Image Segmentation – Layman Explanation
 
-This document explains the **concepts and formulas** used in the notebook `M1S1_6_image_roi.ipynb` in **simple, interview-friendly language**, with examples and common interview questions.
+This document explains the **concepts and formulas**  in **simple, interview-friendly language**, with examples and common interview questions.
 
 ---
 
