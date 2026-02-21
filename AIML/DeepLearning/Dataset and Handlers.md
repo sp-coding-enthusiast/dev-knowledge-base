@@ -10,7 +10,7 @@ This document explains the key ideas and formulas from the provided notebook **D
 # Data Handling with Dataset and DataLoader
 
 ### Overview
-In this video, we cover the complete workflow of handling data in PyTorch using `Dataset` and `DataLoader`.  
+We cover the complete workflow of handling data in PyTorch using `Dataset` and `DataLoader`.  
 
 ### Agenda
 - **Importing Libraries** → set up PyTorch and required modules.
