@@ -332,5 +332,3 @@ They enable parallel throughput and scalable streaming.
 * Checkpointing ensures reliability
 
 ---
-
-If you'd like, I can add diagrams, Kafka comparison table, or architecture scenarios.
