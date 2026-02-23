@@ -264,6 +264,3 @@ A session with many messages that becomes a processing bottleneck because only o
 * Ordering usually guaranteed per session
 * Essential for consistency in distributed systems
 
----
-
-If you'd like, I can add Azure Service Bus sessions behavior, Kafka partition ordering, or diagrams.
